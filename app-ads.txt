@@ -63,7 +63,6 @@ rubiconproject.com, 17328, RESELLER, 0bfd66d529a55807
 apester.com, 91071, DIRECT
 triplelift.com, 11457, RESELLER, 6c33edb13117fd86
 rubiconproject.com, 27784, RESELLER, 0bfd66d529a55807
-video.unrulymedia.com, 5921144960123684292, RESELLER
 axonix.com, 59204, RESELLER
 improvedigital.com, 1532, RESELLER
 themediagrid.com, JAZ4RI, RESELLER, 35d5010d7789b49d
@@ -90,10 +89,6 @@ Media.net, 8CU65V935, RESELLER
 themediagrid.com, SJYVMZ, RESELLER, 35d5010d7789b49d
 triplelift.com, 9342, RESELLER, 6c33edb13117fd86
 pinklion.io, 190976892, DIRECT
-display.io, 224613, RESELLER
-bidease.com, bidease_seller_49, RESELLER
-sovrn.com, 400766, RESELLER, fafdf38b16bf6b2b
-peak226.com, 12900, RESELLER
 bigo.sg, 887, RESELLER
 rubiconproject.com, 22134, RESELLER, 0bfd66d529a55807
 loopme.com, 11463, RESELLER, 6c8d5f95897a5a3b
@@ -137,3 +132,7 @@ smartadserver.com, 5791, RESELLER, 060d053dcf45cbf3
 sharethrough.com, 5791, RESELLER, d53b998a7bd4ecd2
 adorphic.com, 4051, RESELLER
 triplelift.com, 13567, RESELLER, 6c33edb13117fd86
+zetaglobal.net, 748, RESELLER
+themediagrid.com, GODNC4, RESELLER, 9fac4a4a87c2a44f
+smartadserver.com, 3554, RESELLER
+sharethrough.com, 3554, RESELLER, d53b998a7bd4ecd2

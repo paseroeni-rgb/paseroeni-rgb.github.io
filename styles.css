@@ -363,6 +363,36 @@ main {
     gap: 14px;
 }
 
+.benefits-strip {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 10px 0 16px;
+}
+
+.benefit-pill {
+    padding: 16px 18px;
+    border-radius: 20px;
+    border: 1px solid rgba(0,71,171,0.18);
+    background: linear-gradient(180deg, rgba(0,71,171,0.08), rgba(255,255,255,0.94));
+    box-shadow: 0 10px 24px rgba(2,60,138,0.08);
+}
+
+.benefit-pill strong {
+    display: block;
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    color: var(--koenigsblau-strong);
+}
+
+.benefit-pill span {
+    display: block;
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--text-sekundaer);
+}
+
 .feature-card,
 .cta-card,
 .contact-card,
@@ -584,6 +614,7 @@ main {
     }
 
     .features-grid,
+    .benefits-strip,
     .scope-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -635,6 +666,7 @@ main {
     }
 
     .features-grid,
+    .benefits-strip,
     .scope-grid {
         grid-template-columns: 1fr;
     }

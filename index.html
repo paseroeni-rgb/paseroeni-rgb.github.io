@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Alles vor Ort</title>
+  <meta name="description" content="Alles vor Ort ist die kostenlose, zweisprachige App für Paraguay mit Suche, Filtern, Kategorien, Angeboten, Events, Firmen und Jobs.">
+  <meta name="theme-color" content="#0047AB">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon-512.png">
+  <link rel="apple-touch-icon" href="icon-512.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__brand">
+      <img src="icon-512.png" alt="Alles vor Ort Logo" class="topbar__logo">
+      <div>
+        <p class="topbar__kicker" data-i18n="brand_kicker">Kostenlos in Paraguay</p>
+        <h1 class="topbar__title" data-i18n="brand_title">Alles vor Ort</h1>
+      </div>
+    </div>
+    <div class="language-switch" aria-label="Sprachwahl">
+      <button type="button" class="lang-btn" data-lang="de">Deutsch</button>
+      <button type="button" class="lang-btn" data-lang="es">Español</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__content">
+        <span class="hero__badge" data-i18n="hero_badge">Kostenlos · Deutsch &amp; Español</span>
+        <h2 class="hero__headline" data-i18n="hero_headline">Die kostenlose App für Paraguay: suchen, filtern und sofort finden.</h2>
+        <p class="hero__text" data-i18n="hero_text">
+          Suche mit Filtern nach Regionen, entdecke Top-Beiträge, Angebote, Events, Firmen und Jobs und kontaktiere Anbieter direkt.
+        </p>
+        <div class="hero__actions">
+          <a id="download-cta" class="button button--primary" href="#download-info" data-i18n="cta_download_follow">Google Play öffnen</a>
+          <a class="button button--secondary" href="#kontakt" data-i18n="cta_contact">Kontakt</a>
+        </div>
+        <div class="hero__chips" aria-label="Funktionen">
+          <span class="chip" data-i18n="chip_search">Suche &amp; Filter</span>
+          <span class="chip" data-i18n="chip_categories">Kategorien</span>
+          <span class="chip" data-i18n="chip_regions">Regionen</span>
+          <span class="chip" data-i18n="chip_languages">Deutsch / Español</span>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="phone-card">
+          <img src="icon-512.png" alt="App Logo" class="phone-card__logo">
+          <div class="phone-card__screen">
+            <div class="phone-card__row phone-card__row--accent" data-i18n="screen_top">Top · Highlights</div>
+            <div class="phone-card__row" data-i18n="screen_offers">Angebote</div>
+            <div class="phone-card__row" data-i18n="screen_events">Events</div>
+            <div class="phone-card__row" data-i18n="screen_companies">Firmen</div>
+            <div class="phone-card__row" data-i18n="screen_jobs">Jobs</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="features">
+      <div class="section__header">
+        <p class="section__eyebrow" data-i18n="features_eyebrow">Warum sich die App lohnt</p>
+        <h2 class="section__title" data-i18n="features_title">Ihre Vorteile auf einen Blick</h2>
+      </div>
+      <div class="benefits-strip">
+        <div class="benefit-pill">
+          <strong data-i18n="benefit_customers_title">Mehr Kunden</strong>
+          <span data-i18n="benefit_customers_text">Direkt neue Anfragen erreichen</span>
+        </div>
+        <div class="benefit-pill">
+          <strong data-i18n="benefit_reach_title">Größere Reichweite</strong>
+          <span data-i18n="benefit_reach_text">In ganz Paraguay sichtbar werden</span>
+        </div>
+        <div class="benefit-pill">
+          <strong data-i18n="benefit_visibility_title">Mehr Sichtbarkeit</strong>
+          <span data-i18n="benefit_visibility_text">Schneller gefunden werden</span>
+        </div>
+      </div>
+      <div class="features-grid">
+        <article class="feature-card">
+          <h3 data-i18n="feature_search_title">Suche &amp; Filter</h3>
+          <p data-i18n="feature_search_text">Finde Inhalte schnell nach Titel, Ort, Kategorie und Region.</p>
+        </article>
+        <article class="feature-card">
+          <h3 data-i18n="feature_categories_title">Alle Kategorien</h3>
+          <p data-i18n="feature_categories_text">Top, Angebote, Events, Firmen und Jobs sind direkt erreichbar.</p>
+        </article>
+        <article class="feature-card">
+          <h3 data-i18n="feature_region_title">Regionen in Paraguay</h3>
+          <p data-i18n="feature_region_text">Filtere nach Departamento und Stadt, damit du nur Relevantes siehst.</p>
+        </article>
+        <article class="feature-card">
+          <h3 data-i18n="feature_contact_title">Direktkontakt</h3>
+          <p data-i18n="feature_contact_text">Rufe an, öffne WhatsApp, WhatsApp Business, Telegram, Maps oder die Webseite.</p>
+        </article>
+        <article class="feature-card">
+          <h3 data-i18n="feature_favorites_title">Favoriten &amp; Melden</h3>
+          <p data-i18n="feature_favorites_text">Speichere Einträge und melde Inhalte direkt in der App.</p>
+        </article>
+        <article class="feature-card feature-card--highlight">
+          <h3 data-i18n="feature_focus_title">Gewerblich ausgerichtet</h3>
+          <p data-i18n="feature_focus_text">Für Firmen, Selbständige und Veranstalter. Private Verkäufe sind nicht gestattet.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__header">
+        <p class="section__eyebrow" data-i18n="scope_eyebrow">Alles auf einen Blick</p>
+        <h2 class="section__title" data-i18n="scope_title">Die wichtigsten Bereiche</h2>
+      </div>
+      <div class="scope-grid">
+        <div class="scope-item" data-i18n="scope_top">Top-Beiträge</div>
+        <div class="scope-item" data-i18n="scope_offers">Angebote</div>
+        <div class="scope-item" data-i18n="scope_events">Events</div>
+        <div class="scope-item" data-i18n="scope_companies">Firmen</div>
+        <div class="scope-item" data-i18n="scope_jobs">Jobs</div>
+        <div class="scope-item" data-i18n="scope_search">Suche &amp; Filter</div>
+      </div>
+    </section>
+
+    <section class="section section--cta" id="download-info">
+      <div class="section__header section__header--compact">
+        <p class="section__eyebrow" data-i18n="cta_eyebrow">Bereit für den Start</p>
+        <h2 class="section__title" data-i18n="cta_title">Die App kurz erklärt</h2>
+      </div>
+      <div class="cta-card">
+        <p class="cta-card__text" data-i18n="cta_copy">
+          Alles vor Ort ist deine kostenlose App für Paraguay. Suche, filtere und finde Angebote, Events, Firmen und Jobs in deiner Region.
+        </p>
+        <div class="cta-card__actions">
+          <a id="download-cta-bottom" class="button button--primary" href="#kontakt" data-i18n="cta_download_follow">Google Play öffnen</a>
+          <a class="button button--ghost" href="#features" data-i18n="cta_more">Mehr erfahren</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--contact" id="kontakt">
+      <div class="section__header section__header--compact">
+        <p class="section__eyebrow" data-i18n="contact_eyebrow">Kontakt</p>
+        <h2 class="section__title" data-i18n="contact_title">Fragen oder Interesse?</h2>
+      </div>
+      <div class="contact-card contact-card--options">
+        <p data-i18n="contact_text">Schreiben Sie uns kurz, wenn Sie Fragen zur App oder zur Zusammenarbeit haben.</p>
+        <div class="contact-actions">
+          <a class="button button--primary" href="https://wa.me/595981383511" target="_blank" rel="noopener noreferrer" data-i18n="contact_whatsapp">WhatsApp öffnen</a>
+          <a class="button button--secondary" href="https://wa.me/595981383511" target="_blank" rel="noopener noreferrer" data-i18n="contact_whatsapp_business">WhatsApp Business</a>
+          <a class="button button--secondary" href="https://t.me/Kurspr" target="_blank" rel="noopener noreferrer" data-i18n="contact_telegram">Telegram öffnen</a>
+          <a class="button button--ghost" href="mailto:paseroeni@gmail.com?subject=Alles%20vor%20Ort%20Kontakt&body=Hallo%20AvO-Team%2C%0A%0A" data-i18n="contact_email">E-Mail senden</a>
+        </div>
+      </div>
+
+      <div class="section__header section__header--compact contact-form-head">
+        <p class="section__eyebrow" data-i18n="contact_form_eyebrow">Kontaktformular</p>
+        <h3 class="section__title contact-form-head__title" data-i18n="contact_form_title">Nachricht senden</h3>
+      </div>
+      <div class="contact-card contact-form-card">
+        <p data-i18n="contact_form_intro">Nutzen Sie das Formular, wenn Sie direkt schreiben möchten.</p>
+        <form id="contact-form" class="contact-form">
+          <label class="field">
+            <span data-i18n="contact_form_name">Name *</span>
+            <input id="contact-name" type="text" autocomplete="name" required>
+          </label>
+          <label class="field">
+            <span data-i18n="contact_form_email">E-Mail *</span>
+            <input id="contact-email" type="email" autocomplete="email" required>
+          </label>
+          <label class="field">
+            <span data-i18n="contact_form_phone">WhatsApp (Optional)</span>
+            <input id="contact-phone" type="tel" autocomplete="tel">
+          </label>
+          <label class="field field--message">
+            <span data-i18n="contact_form_message">Nachricht *</span>
+            <textarea id="contact-message" rows="5" required></textarea>
+          </label>
+          <label class="contact-checkbox">
+            <input id="contact-human" type="checkbox">
+            <span data-i18n="contact_form_human">Ich bin ein Mensch</span>
+          </label>
+          <button id="contact-submit" class="button button--primary contact-submit" type="submit" data-i18n="contact_form_submit">Absenden</button>
+          <p id="contact-status" class="contact-status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="legal-links">
+        <a href="#impressum" data-i18n="footer_imprint">Impressum</a>
+        <a href="#datenschutz" data-i18n="footer_privacy">Datenschutz</a>
+      </div>
+    </section>
+
+    <section class="section section--legal" id="impressum">
+      <div class="section__header section__header--compact">
+        <p class="section__eyebrow" data-i18n="footer_imprint">Impressum</p>
+      </div>
+      <div class="legal-card" data-i18n-html="imprint_full_text"></div>
+      <div class="legal-card legal-card--meta">
+        <p id="imprint-version"></p>
+        <a id="imprint-play-store" href="#" target="_blank" rel="noopener noreferrer" data-i18n="imprint_play_store_link">Im Play Store ansehen</a>
+      </div>
+    </section>
+
+    <section class="section section--legal" id="datenschutz">
+      <div class="section__header section__header--compact">
+        <p class="section__eyebrow" data-i18n="footer_privacy">Datenschutz</p>
+      </div>
+      <div class="legal-card" data-i18n-html="privacy_full_text"></div>
+      <div class="legal-card legal-card--meta">
+        <a id="privacy-delete-link" href="https://sites.google.com/view/allesvorortdatenloeschen/" target="_blank" rel="noopener noreferrer" data-i18n="privacy_delete_link">Antrag auf Datenlöschung</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <img src="icon-512.png" alt="Alles vor Ort Logo" class="footer__logo">
+      <div>
+        <strong data-i18n="brand_title">Alles vor Ort</strong>
+        <div class="footer__sub" data-i18n="footer_sub">Kostenlos · Deutsch / Español · Paraguay</div>
+      </div>
+    </div>
+    <div class="footer__links">
+      <a href="#kontakt" data-i18n="footer_contact">Kontakt</a>
+      <a href="#impressum" data-i18n="footer_imprint">Impressum</a>
+      <a href="#datenschutz" data-i18n="footer_privacy">Datenschutz</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

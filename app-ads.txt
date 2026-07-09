@@ -331,6 +331,16 @@ xandr.com, 17779, RESELLER
 zetaglobal.net, 630, WIEDERVERKÄUFER
 
 zmaticoo.com, 5135195, RESELLER
+
+admanmedia.com, 2242, WIEDERVERKÄUFER
+
+adyoulike.com, f78b240396413737f0663ab9a3da4b48, WIEDERVERKÄUFER
+
+ans.io, 691e95644e633a6eee2567ee, RESELLER, 1c1b7acf4992136c
+
+tredio.io, 357a6fdf7642bf815a8882c447d9dc436891, RESELLER
+
+zetaglobal.net, 630, WIEDERVERKÄUFER
 start.io, 169203287, DIRECT
 pubnative.net, 1007349, RESELLER, d641df8625486a7b
 pubmatic.com, 161162, RESELLER, 5d62403b186f2ace

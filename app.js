@@ -368,15 +368,6 @@ function renderLegalMeta() {
   const lang = document.body.dataset.lang || localStorage.getItem(LANG_KEY) || 'de';
   const strings = STRINGS[lang] || STRINGS.de;
 
-  const versionEl = document.getElementById('imprint-version');
-  if (versionEl) {
-    const versionName = appVersionName || 'Web';
-    const versionCode = appVersionCode || '0';
-    versionEl.textContent = lang === 'es'
-      ? `Versión: ${versionName} (Build ${versionCode})`
-      : `Version: ${versionName} (Build ${versionCode})`;
-  }
-
   const playStoreEl = document.getElementById('imprint-play-store');
   if (playStoreEl) {
     playStoreEl.textContent = strings.imprint_play_store_link;

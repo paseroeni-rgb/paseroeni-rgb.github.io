@@ -22,6 +22,12 @@
         --koenigsblau: #0091FF;
         --koenigsblau-strong: #2A7FFF;
     }
+    .section--soft {
+        background: linear-gradient(180deg, rgba(14, 23, 34, 0.96), rgba(10, 20, 35, 0.98)) !important;
+    }
+    .benefit-pill span {
+        color: #5C6C7C !important; /* Deutlich dunkleres Grau für den Nachtmodus (wie gewünscht dunkler als die Überschrift) */
+    }
 }
 
 * { box-sizing: border-box; }
@@ -235,8 +241,15 @@ main {
 }
 .button--ghost {
     background: transparent;
-    border-color: rgba(255,255,255,0.22);
-    color: white;
+    border-color: var(--koenigsblau);
+    color: var(--koenigsblau) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    .button--ghost {
+        border-color: var(--koenigsblau);
+        color: var(--koenigsblau) !important;
+    }
 }
 
 .hero__chips {
@@ -566,6 +579,28 @@ main {
 
 .legal-card p + p {
     margin-top: 12px;
+}
+
+#imprint-play-store {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background: var(--koenigsblau);
+    color: white !important;
+    border-radius: 999px;
+    font-weight: 850;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    box-shadow: 0 6px 16px rgba(0, 71, 171, 0.25);
+    margin-top: 14px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#imprint-play-store:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0, 71, 171, 0.35);
 }
 
 .footer {

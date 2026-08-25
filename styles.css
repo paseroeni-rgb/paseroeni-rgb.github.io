@@ -25,9 +25,6 @@
     .section--soft {
         background: linear-gradient(180deg, rgba(14, 23, 34, 0.96), rgba(10, 20, 35, 0.98)) !important;
     }
-    .benefit-pill span {
-        color: #5C6C7C !important; /* Deutlich dunkleres Grau für den Nachtmodus (wie gewünscht dunkler als die Überschrift) */
-    }
 }
 
 * { box-sizing: border-box; }
@@ -241,15 +238,8 @@ main {
 }
 .button--ghost {
     background: transparent;
-    border-color: var(--koenigsblau);
-    color: var(--koenigsblau) !important;
-}
-
-@media (prefers-color-scheme: dark) {
-    .button--ghost {
-        border-color: var(--koenigsblau);
-        color: var(--koenigsblau) !important;
-    }
+    border-color: rgba(255,255,255,0.22);
+    color: white;
 }
 
 .hero__chips {
